@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>Smartphone Catalog</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato%7CRaleway" rel="stylesheet">
+    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script type="module" src="js/main.js"></script>
+</head>
+<body>
+    <div class="grid-con" id="app">
+        <div class="col-span-full l-col-span-full">
+            <h2>Latest Smartphones</h2>
+            <p>Explore the specifications of the latest smartphones on the market.</p>
+            <p>Click on a smartphone model to find out more about its features.</p>
+            <ul id="phone-list">
+                <li v-for="phone in phonesData" :key="phone.PhoneID">
+                    <div @click.prevent="selectedPhoneID === phone.PhoneID ? selectedPhoneID = null : getPhoneDetails(phone.PhoneID)" class="phone-item">
+                        <img :src="`/Smartphone-api/public/images/${phone.ImageFileName}`" :alt="phone.Model" class="phone-image" />
+                        <h3>Model: {{ phone.Model }}</h3>
+                        <h4>Price: CAD {{ phone.Price }}</h4>
+                    </div>
+                    <div v-if="selectedPhoneID === phone.PhoneID" class="phone-details">
+                        <p>Release Year: {{ selectedPhoneDetails.ReleaseYear }}</p>
+                        <p>Camera Specs: {{ selectedPhoneDetails.Camera }}</p>
+                        <p>Processor: {{ selectedPhoneDetails.Processor }}</p>
+                        <p>Display: {{ selectedPhoneDetails.Display }}</p>
+                        <p>Battery Capacity: {{ selectedPhoneDetails.BatteryCapacity }} mAh</p>
+                        <p>Canadian Price: CAD {{ selectedPhoneDetails.CanadianPrice }}</p>
+                    </div>
+                </li>
+            </ul>
+            
+
+        
+        
+    </div>
+</body>
+</html>

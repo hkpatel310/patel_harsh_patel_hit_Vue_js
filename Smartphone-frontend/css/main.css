@@ -1,0 +1,121 @@
+/* Base styles for typographic elements */
+body {
+    font-family: "Raleway", sans-serif;
+    background-color: #f4f4f4; /* Soft gray background */
+    color: #333; /* Dark gray color for text */
+    margin: 0;
+    padding: 20px;
+}
+
+h2 {
+    color: #2c3e50; /* Dark blue color */
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 24px;
+    color: #34495e; /* Slightly lighter blue */
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Styling for the list of smartphones */
+#phone-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 0;
+}
+
+#phone-list li {
+    background-color: #fff; /* White background for list items */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 4px solid #3498db; /* Blue accent border */
+    transition: border-color 0.3s;
+}
+
+#phone-list li:hover {
+    border-left-color: #1abc9c; /* Change border color on hover */
+}
+
+/* Styling for the smartphone details container */
+#phoneDetailsCon {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-top: 40px;
+}
+
+a {
+    color: #3498db; /* Blue color to match the theme */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #1abc9c; /* Color changes on hover */
+}
+
+/* Add responsive behavior to the layout */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    #app {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+
+.phone-image {
+    max-width: 100px; /* Adjust as necessary */
+    height: auto;
+    margin-right: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: block; /* Or inline-block, depending on your layout */
+}
+#phone-list {
+    list-style: none;
+    padding: 0;
+}
+
+.phone-item {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.phone-item:hover {
+    background-color: #f0f0f0;
+}
+
+.phone-details {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #3498db;
+    border-radius: 4px;
+}
