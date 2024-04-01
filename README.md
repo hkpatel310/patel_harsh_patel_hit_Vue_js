@@ -19,27 +19,6 @@ To get a local copy up and running, follow these simple steps.
 - [Vue.js](https://vuejs.org/)
 - [Lumen](https://lumen.laravel.com/)
 
-### Installation
-
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/your_username/smartphone-catalog.git
-   ```
-
-2. Install NPM packages for the Vue.js frontend:
-   ```sh
-   cd smartphone-catalog/frontend
-   npm install
-   ```
-
-3. Set up the Lumen backend API (refer to the backend setup instructions in the `/backend` directory).
-
-4. Serve the Vue.js application:
-   ```sh
-   npm run serve
-   ```
-
-5. Access the application through `http://localhost:8080` (or the port provided in the terminal).
 
 ## Usage 📖
 
